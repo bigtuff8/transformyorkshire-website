@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Yorkshire — Big Thinking, Straight Talking | Consultancy & Transformation</title>
+    <meta name="description" content="Transform Yorkshire — consultancy and delivery capability helping businesses scale quickly and safely. Over 20 years working with SMEs through to FTSE 100. Complex Problems, Clear Solutions.">
+    <meta name="keywords" content="business transformation Yorkshire, consultancy Leeds, change management, programme management, digital transformation, operating model, SME consultancy">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Transform Yorkshire — Big Thinking, Straight Talking">
+    <meta property="og:description" content="Consultancy and delivery capability helping businesses scale quickly and safely. Over 20 years across SME to FTSE 100.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://transformyorkshire.uk">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Favicon — white rose SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg transform='translate(50,50)'%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(72)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(144)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(216)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(288)'/%3E%3Ccircle cx='0' cy='0' r='6' fill='%23C8A84E'/%3E%3C/g%3E%3C/svg%3E">
+
+    <!-- Google Analytics placeholder -->
+    <!-- Replace G-XXXXXXXXXX with your Measurement ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Raleway:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --slate: #2C3E50;
+            --claret: #8B2D3A;
+            --claret-light: rgba(139, 45, 58, 0.08);
+            --stone: #D4C5A9;
+            --rose-white: #F8F6F1;
+            --warm-white: #FEFDFB;
+            --gold: #C8A84E;
+            --text: #2C3E50;
+            --text-light: #5A5A5A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--slate);
+            color: var(--rose-white);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        /* Top accent bar */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg,
+                var(--claret) 0%,
+                var(--gold) 25%,
+                var(--stone) 50%,
+                var(--gold) 75%,
+                var(--claret) 100%
+            );
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 640px;
+            width: 100%;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        /* Logo area */
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
+        }
+
+        .logo-text {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--rose-white);
+        }
+
+        /* Tagline */
+        .tagline {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-style: italic;
+            font-size: 2rem;
+            color: var(--rose-white);
+            line-height: 1.25;
+            margin-bottom: 0.4rem;
+        }
+
+        .tagline-secondary {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--stone);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1.5rem auto;
+        }
+
+        .divider .line {
+            width: 40px;
+            height: 1px;
+            background: var(--stone);
+            opacity: 0.4;
+        }
+
+        .divider .dot {
+            width: 5px;
+            height: 5px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        /* Description */
+        .description {
+            font-size: 0.95rem;
+            color: var(--stone);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Coming soon badge */
+        .coming-soon {
+            display: inline-block;
+            background: var(--claret);
+            color: var(--rose-white);
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.5rem 1.4rem;
+            border-radius: 3px;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Service pills */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .service-pill {
+            font-size: 0.78rem;
+            color: var(--rose-white);
+            border: 1px solid rgba(212, 197, 169, 0.25);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-weight: 400;
+            transition: all 0.2s ease;
+        }
+
+        .service-pill:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* Stats row */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat {
+            padding: 1rem 0.5rem;
+            border: 1px solid rgba(212, 197, 169, 0.15);
+            border-radius: 8px;
+            background: rgba(254, 253, 251, 0.03);
+        }
+
+        .stat .number {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            line-height: 1.2;
+        }
+
+        .stat .label {
+            font-size: 0.7rem;
+            color: var(--stone);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.2rem;
+        }
+
+        /* Contact card */
+        .contact-card {
+            background: rgba(254, 253, 251, 0.04);
+            border: 1px solid rgba(212, 197, 169, 0.15);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-card h3 {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--rose-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p {
+            font-size: 0.85rem;
+            color: var(--stone);
+            margin-bottom: 1rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--claret);
+            color: var(--rose-white);
+            text-decoration: none;
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            padding: 0.7rem 2rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-btn:hover {
+            background: #A13545;
+            transform: translateY(-1px);
+        }
+
+        /* Quote */
+        .quote {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--stone);
+            margin-bottom: 0.3rem;
+            padding: 0 1rem;
+        }
+
+        .quote::before { content: '\201C'; }
+        .quote::after { content: '\201D'; }
+
+        .quote-source {
+            font-size: 0.72rem;
+            color: rgba(212, 197, 169, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        .footer {
+            font-size: 0.72rem;
+            color: rgba(212, 197, 169, 0.4);
+            padding-top: 1rem;
+            border-top: 1px solid rgba(212, 197, 169, 0.1);
+        }
+
+        .footer a {
+            color: rgba(212, 197, 169, 0.4);
+            text-decoration: none;
+        }
+
+        .footer a:hover { color: var(--stone); }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .tagline { font-size: 1.6rem; }
+            .logo-text { font-size: 1rem; }
+            .stats { grid-template-columns: 1fr; }
+            .container { padding: 2rem 1.25rem; }
+            .services { gap: 0.4rem; }
+        }
+
+        /* Fade in animation */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container > * {
+            animation: fadeUp 0.6s ease-out both;
+        }
+
+        .container > *:nth-child(1) { animation-delay: 0.1s; }
+        .container > *:nth-child(2) { animation-delay: 0.15s; }
+        .container > *:nth-child(3) { animation-delay: 0.2s; }
+        .container > *:nth-child(4) { animation-delay: 0.3s; }
+        .container > *:nth-child(5) { animation-delay: 0.35s; }
+        .container > *:nth-child(6) { animation-delay: 0.4s; }
+        .container > *:nth-child(7) { animation-delay: 0.5s; }
+        .container > *:nth-child(8) { animation-delay: 0.6s; }
+        .container > *:nth-child(9) { animation-delay: 0.65s; }
+        .container > *:nth-child(10) { animation-delay: 0.7s; }
+        .container > *:nth-child(11) { animation-delay: 0.75s; }
+        .container > *:nth-child(12) { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="logo">
+            <svg viewBox="0 0 100 100" width="30" height="30">
+                <g transform="translate(50,50)">
+                    <path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1"/>
+                    <path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(72)"/>
+                    <path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(144)"/>
+                    <path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(216)"/>
+                    <path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(288)"/>
+                    <path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(36)"/>
+                    <path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(108)"/>
+                    <path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(180)"/>
+                    <path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(252)"/>
+                    <path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(324)"/>
+                    <circle cx="0" cy="0" r="6" fill="#C8A84E"/>
+                </g>
+            </svg>
+            <span class="logo-text">Transform Yorkshire</span>
+        </div>
+
+        <!-- Tagline -->
+        <h1 class="tagline">Big Thinking,<br>Straight Talking</h1>
+        <p class="tagline-secondary">Complex Problems, Clear Solutions</p>
+
+        <!-- Divider -->
+        <div class="divider">
+            <span class="line"></span>
+            <span class="dot"></span>
+            <span class="line"></span>
+        </div>
+
+        <!-- Description -->
+        <p class="description">
+            We bring over 20 years of consultancy and delivery experience — from FTSE 100 programmes
+            to ambitious SMEs — helping businesses transform, scale, and get complex things done.
+        </p>
+
+        <!-- Coming soon -->
+        <div class="coming-soon">Full website coming soon</div>
+
+        <!-- Services -->
+        <div class="services">
+            <span class="service-pill">Change & Transformation</span>
+            <span class="service-pill">Product & Proposition</span>
+            <span class="service-pill">Operating Model</span>
+            <span class="service-pill">Customer Experience</span>
+            <span class="service-pill">Digital Presence</span>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat">
+                <div class="number">20+</div>
+                <div class="label">Years experience</div>
+            </div>
+            <div class="stat">
+                <div class="number">£15m</div>
+                <div class="label">Programmes delivered</div>
+            </div>
+            <div class="stat">
+                <div class="number">+60</div>
+                <div class="label">NPS scores achieved</div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-card">
+            <h3>Let's have a conversation</h3>
+            <p>Initial discussions are always free and without obligation. We'll listen, understand your challenges, and give you an honest view of how we can help.</p>
+            <a href="mailto:info@transformyorkshire.uk" class="contact-btn">Get in touch</a>
+        </div>
+
+        <!-- Quote -->
+        <p class="quote">The person you meet is the person who does the work</p>
+        <p class="quote-source">— That's our promise</p>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2026 Transform Yorkshire Ltd · Company No. 16066824</p>
+            <p style="margin-top: 0.3rem;"><a href="mailto:info@transformyorkshire.uk">info@transformyorkshire.uk</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
