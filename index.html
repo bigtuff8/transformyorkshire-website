@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform Yorkshire — Big Thinking, Straight Talking</title>
     <meta name="description" content="Transform Yorkshire — consultancy and delivery capability helping businesses scale quickly and safely. Over 20 years across SME to FTSE 100.">
-    <!-- Google Analytics -->
+    <!-- Google Analytics — consent-aware -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CX9QHTHE1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        // Default to denied — updated to granted if user accepts
+        gtag('consent', 'default', { 'analytics_storage': 'denied' });
         gtag('js', new Date());
         gtag('config', 'G-8CX9QHTHE1');
+        // If already accepted, grant immediately
+        if (document.cookie.indexOf('ty_cookie_consent=accepted') !== -1) {
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +66,7 @@
             position: relative;
             overflow: hidden;
             background: linear-gradient(165deg, rgba(17,24,32,0.88) 0%, rgba(17,24,32,0.7) 50%, rgba(139,45,58,0.25) 100%),
-                        url('https://upload.wikimedia.org/wikipedia/commons/e/e1/Leeds_Skyline_By_Night.jpg') center/cover no-repeat;
+                        url('images/leeds-skyline-night.jpg') center/cover no-repeat;
             border-bottom: 1px solid var(--border);
         }
         .hero {
@@ -379,7 +385,7 @@
 </section>
 
 <!-- Ribblehead Viaduct image band -->
-<div class="image-band" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Colas_Rail_70_815_Ribblehead_Viaduct.jpg/1920px-Colas_Rail_70_815_Ribblehead_Viaduct.jpg');"></div>
+<div class="image-band" style="background-image: url('images/ribblehead-viaduct.jpg');"></div>
 
 <!-- CASE STUDIES — scroll -->
 <div class="cases-section" id="work">
@@ -513,7 +519,7 @@
 </section>
 
 <!-- Whitby Abbey image band -->
-<div class="image-band" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Whitby_Abbey_1.jpg/1920px-Whitby_Abbey_1.jpg'); height: 160px;"></div>
+<div class="image-band" style="background-image: url('images/whitby-abbey.jpg'); height: 160px;"></div>
 
 <!-- INSIGHTS -->
 <section id="insights">
@@ -701,6 +707,88 @@
 <footer>
     <p>&copy; 2026 Transform Yorkshire Ltd · Company No. 16066824 · Based in Yorkshire, working nationally</p>
 </footer>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookieBanner" style="
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(17,24,32,0.97); backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(212,197,169,0.15);
+    padding: 1.2rem 2rem;
+">
+    <div style="max-width: 920px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px;">
+            <p style="font-size: 0.82rem; color: #8899AA; margin: 0; line-height: 1.5;">
+                We use cookies to analyse site traffic and improve your experience. By clicking "Accept", you consent to our use of Google Analytics cookies.
+                <a href="#" style="color: #C8A84E; text-decoration: none;" onclick="document.getElementById('cookieDetail').style.display=document.getElementById('cookieDetail').style.display==='none'?'block':'none'; return false;">Learn more</a>
+            </p>
+            <div id="cookieDetail" style="display: none; margin-top: 0.6rem; font-size: 0.75rem; color: #5A6A7A; line-height: 1.5;">
+                We use Google Analytics (GA4) to understand how visitors interact with our website — including which pages are visited, how long people stay, and where traffic comes from. This data is anonymised and helps us improve the site. No personal data is sold or shared with third parties. You can withdraw consent at any time by clearing your cookies.
+            </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem; flex-shrink: 0;">
+            <button onclick="acceptCookies()" style="
+                background: #8B2D3A; color: #F8F6F1; border: none; cursor: pointer;
+                font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 600;
+                padding: 0.6rem 1.5rem; border-radius: 4px; transition: background 0.2s;
+            " onmouseover="this.style.background='#A13545'" onmouseout="this.style.background='#8B2D3A'">Accept</button>
+            <button onclick="declineCookies()" style="
+                background: transparent; color: #8899AA; border: 1px solid rgba(136,153,170,0.3); cursor: pointer;
+                font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 500;
+                padding: 0.6rem 1.5rem; border-radius: 4px; transition: all 0.2s;
+            " onmouseover="this.style.borderColor='#8899AA'" onmouseout="this.style.borderColor='rgba(136,153,170,0.3)'">Decline</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cookie consent management
+    function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
+    }
+
+    function acceptCookies() {
+        setCookie('ty_cookie_consent', 'accepted', 365);
+        document.getElementById('cookieBanner').style.display = 'none';
+        loadGA();
+    }
+
+    function declineCookies() {
+        setCookie('ty_cookie_consent', 'declined', 365);
+        document.getElementById('cookieBanner').style.display = 'none';
+        // Disable GA
+        window['ga-disable-G-8CX9QHTHE1'] = true;
+    }
+
+    function loadGA() {
+        // GA is already in the head — this just confirms consent was given
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+
+    // On page load: check consent status
+    const consent = getCookie('ty_cookie_consent');
+    if (!consent) {
+        // No decision yet — show banner, default GA to denied
+        document.getElementById('cookieBanner').style.display = 'block';
+        if (typeof gtag === 'function') {
+            gtag('consent', 'default', {
+                'analytics_storage': 'denied'
+            });
+        }
+    } else if (consent === 'declined') {
+        window['ga-disable-G-8CX9QHTHE1'] = true;
+    }
+</script>
 
 </body>
 </html>
