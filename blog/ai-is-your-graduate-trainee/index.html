@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Is Your Oxford Graduate Trainee — Transform Yorkshire</title>
+    <meta name="description" content="It started with funny dog pictures. Six months later, I was shipping production software. Here's what happened in between — and why most people quit before it gets good.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Is Your Oxford Graduate Trainee">
+    <meta property="og:description" content="It started with funny dog pictures. Six months later, I was shipping production software. Here's what happened in between.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://transformyorkshire.uk/blog/ai-is-your-graduate-trainee/">
+    <meta property="og:site_name" content="Transform Yorkshire">
+
+    <!-- Google Analytics — consent-aware -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CX9QHTHE1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', { 'analytics_storage': 'denied' });
+        gtag('js', new Date());
+        gtag('config', 'G-8CX9QHTHE1');
+        if (document.cookie.indexOf('ty_cookie_consent=accepted') !== -1) {
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Raleway:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg transform='translate(50,50)'%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(72)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(144)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(216)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(288)'/%3E%3Ccircle cx='0' cy='0' r='6' fill='%23C8A84E'/%3E%3C/g%3E%3C/svg%3E">
+    <style>
+        :root {
+            --slate: #2C3E50;
+            --dark: #1A2332;
+            --darker: #111820;
+            --claret: #8B2D3A;
+            --claret-glow: rgba(139,45,58,0.12);
+            --stone: #D4C5A9;
+            --rose: #F8F6F1;
+            --gold: #C8A84E;
+            --light: #8899AA;
+            --border: rgba(212,197,169,0.08);
+            --border-strong: rgba(212,197,169,0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--darker); color: var(--rose); line-height: 1.7; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+            background: rgba(17,24,32,0.92); backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.9rem 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        nav::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--claret), var(--gold), var(--claret)); }
+        .nav-logo { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+        .nav-logo svg { width: 32px; height: 32px; filter: drop-shadow(0 0 6px rgba(200,168,78,0.3)); }
+        .nav-logo span { font-family: 'Raleway', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rose); }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { font-size: 0.8rem; color: var(--light); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta { background: var(--claret) !important; color: var(--rose) !important; padding: 0.5rem 1.2rem !important; border-radius: 5px; font-weight: 600 !important; transition: background 0.2s !important; }
+        .nav-cta:hover { background: #A13545 !important; }
+
+        /* BLOG POST HEADER */
+        .post-header {
+            padding: 7rem 2rem 2.5rem;
+            max-width: 720px; margin: 0 auto;
+        }
+        .post-category {
+            display: inline-block; font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--claret); background: var(--claret-glow);
+            padding: 0.25rem 0.6rem; border-radius: 3px; margin-bottom: 1rem;
+        }
+        .post-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem; line-height: 1.15;
+            color: var(--rose); margin-bottom: 0.5rem;
+        }
+        .post-subtitle {
+            font-size: 1.05rem; color: var(--light);
+            line-height: 1.6; margin-bottom: 1.2rem;
+            max-width: 600px;
+        }
+        .post-meta {
+            display: flex; gap: 1.5rem; align-items: center;
+            font-size: 0.75rem; color: rgba(136,153,170,0.6);
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        .post-meta time { color: var(--light); }
+
+        /* ARTICLE BODY */
+        .post-body {
+            max-width: 720px; margin: 0 auto;
+            padding: 0 2rem 2rem;
+        }
+        .post-body p {
+            font-size: 0.95rem; color: rgba(248,246,241,0.85);
+            line-height: 1.85; margin-bottom: 1.4rem;
+        }
+        .post-body h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem; color: var(--rose);
+            margin: 2.5rem 0 0.8rem;
+        }
+        .post-body h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem; color: var(--rose);
+            margin: 2rem 0 0.6rem;
+        }
+        .post-body strong { color: var(--rose); }
+        .post-body em { color: var(--stone); }
+        .post-body ul, .post-body ol {
+            margin: 0.5rem 0 1.4rem 1.5rem;
+            font-size: 0.95rem; color: rgba(248,246,241,0.85);
+            line-height: 1.85;
+        }
+        .post-body li { margin-bottom: 0.6rem; }
+        .post-body blockquote {
+            border-left: 3px solid var(--claret);
+            padding: 0.8rem 1.2rem;
+            margin: 1.5rem 0;
+            background: rgba(139,45,58,0.06);
+            border-radius: 0 6px 6px 0;
+        }
+        .post-body blockquote p { margin-bottom: 0; color: var(--stone); font-style: italic; }
+
+        /* SECTION DIVIDER */
+        .post-divider {
+            max-width: 720px; margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .post-divider-line {
+            height: 1px; background: var(--border-strong);
+        }
+
+        /* AUTHOR BIO */
+        .author-bio {
+            max-width: 720px; margin: 0 auto;
+            padding: 2rem 2rem 1.5rem;
+            display: flex; gap: 1.2rem; align-items: flex-start;
+        }
+        .author-avatar {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: var(--dark); border: 2px solid var(--border-strong);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem; color: var(--gold);
+        }
+        .author-info h4 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem; color: var(--rose); margin-bottom: 0.2rem;
+        }
+        .author-info p {
+            font-size: 0.82rem; color: var(--light); line-height: 1.55;
+        }
+        .author-info a { color: var(--gold); text-decoration: none; font-size: 0.82rem; }
+        .author-info a:hover { text-decoration: underline; }
+
+        /* SOFT CTA */
+        .post-cta {
+            max-width: 720px; margin: 0 auto;
+            padding: 1.5rem 2rem 2rem;
+        }
+        .post-cta-box {
+            background: var(--dark); border: 1px solid var(--border-strong);
+            border-radius: 10px; padding: 2rem;
+            text-align: center;
+        }
+        .post-cta-box h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem; color: var(--rose); margin-bottom: 0.5rem;
+        }
+        .post-cta-box p {
+            font-size: 0.88rem; color: var(--light);
+            line-height: 1.6; margin-bottom: 1.2rem;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-primary {
+            display: inline-block; background: var(--claret); color: var(--rose);
+            font-family: 'Raleway', sans-serif; font-size: 0.82rem;
+            font-weight: 600; letter-spacing: 0.04em;
+            padding: 0.8rem 2rem; border-radius: 5px;
+            text-decoration: none; transition: all 0.2s;
+        }
+        .btn-primary:hover { background: #A13545; transform: translateY(-1px); }
+
+        /* SHARE + BACK */
+        .post-actions {
+            max-width: 720px; margin: 0 auto;
+            padding: 1rem 2rem 3rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .back-link {
+            font-size: 0.82rem; color: var(--light);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--gold); }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: #0A66C2; color: #fff;
+            font-family: 'Raleway', sans-serif; font-size: 0.78rem;
+            font-weight: 600; padding: 0.5rem 1.2rem;
+            border-radius: 5px; text-decoration: none;
+            transition: background 0.2s; border: none; cursor: pointer;
+        }
+        .share-btn:hover { background: #084d94; }
+        .share-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+        /* FOOTER */
+        footer {
+            text-align: center; padding: 1.5rem 2rem;
+            font-size: 0.7rem; color: rgba(136,153,170,0.4);
+            border-top: 1px solid var(--border);
+        }
+        footer a { color: rgba(136,153,170,0.4); text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .post-header { padding: 6rem 1.5rem 2rem; }
+            .post-header h1 { font-size: 2rem; }
+            .post-body { padding: 0 1.5rem 2rem; }
+            .post-divider { padding: 0 1.5rem; }
+            .author-bio { padding: 2rem 1.5rem 1.5rem; flex-direction: column; }
+            .post-cta { padding: 1.5rem; }
+            .post-cta-box { padding: 1.5rem; }
+            .post-actions { padding: 1rem 1.5rem 3rem; flex-direction: column-reverse; gap: 1rem; align-items: flex-start; }
+            .post-meta { flex-wrap: wrap; gap: 0.8rem; }
+            nav { padding: 0.7rem 1rem; }
+            .nav-links a:not(.nav-cta) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="../../" class="nav-logo">
+        <svg viewBox="0 0 100 100" width="32" height="32"><g transform="translate(50,50)"><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(72)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(144)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(216)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(288)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(36)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(108)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(180)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(252)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(324)"/><circle cx="0" cy="0" r="5" fill="#C8A84E"/></g></svg>
+        <span>Transform Yorkshire</span>
+    </a>
+    <div class="nav-links">
+        <a href="../../#services">Services</a>
+        <a href="../../#work">Work</a>
+        <a href="../../#about">About</a>
+        <a href="../../#insights">Blog</a>
+        <a href="../../#contact" class="nav-cta">Get in touch</a>
+    </div>
+</nav>
+
+<!-- POST HEADER -->
+<header class="post-header">
+    <span class="post-category">AI & Transformation</span>
+    <h1>AI Is Your Oxford Graduate Trainee</h1>
+    <p class="post-subtitle">It started with funny dog pictures. Six months later, I was shipping production software. Here's what happened in between — and why most people quit before it gets good.</p>
+    <div class="post-meta">
+        <span>James Brown</span>
+        <time datetime="2026-03-28">28 March 2026</time>
+        <span>7 min read</span>
+    </div>
+</header>
+
+<!-- ARTICLE -->
+<article class="post-body">
+
+    <p>It started with funny dog pictures.</p>
+
+    <p>I'd been dabbling with ChatGPT like everyone else — a slightly more engaged Google search. My brother-in-law was round, and he was making pictures of dogs on human bodies. Hilarious. He told me he paid £20 a month for it. I asked if he used it for work. He's doing well, but £20 a month for pictures of dogs' heads on human bodies is still a bit rich. He said he used it all the time for tenders at work.</p>
+
+    <p>Right then. I started my subscription and made a concerted effort to actually use it. I had a couple of projects in mind — a personal one and a work one. At work, I wanted to build something that knitted together some standard Microsoft apps — a ticketing system linking a form, SharePoint and Teams using Power Automate. And at home, one of those family organiser apps.</p>
+
+    <h2>The painful bit</h2>
+
+    <p>I worked for about two weeks with ChatGPT. Input... copy/paste... instructions... try and navigate the interface... interface doesn't match the instructions... error... ChatGPT gets the instruction wrong but tells me I made a good spot, how great my logic is, how strong a problem solver I am... and acknowledging over and over again that it should have done better, it should have remembered what I'd said.</p>
+
+    <p>And finding out that even when it says it knows something — especially the details of the discussion you've just been having... <strong>it lies. It lies and lies and lies.</strong></p>
+
+    <p>Progress was painfully slow. Painfully painful. So painful. I flipped to the home project for some relief. I prepared, downloaded tools, set up a project structure in GitHub. Set up GitHub! Then... ChatGPT gave me code, I copied and pasted it. I updated it. ChatGPT forgot what we'd done. Deleted stuff. Ignored stuff. Apologised. Complimented me. I got nowhere. Slowly.</p>
+
+    <p>A month had passed. I could see the potential — the AI was clearly so much better than me in areas I had no knowledge about — but it was painful in every way possible. I felt like I'd blown a month, and September was beyond hectic. I didn't have the time to waste.</p>
+
+    <h2>Shared pain is easier to handle</h2>
+
+    <p>I spoke to a couple of colleagues who were also dabbling. They had a software development background and they had their own demons to tackle — if the machine does the work I've been learning and selling as expertise for the last ten years, what will there be left over for me?</p>
+
+    <p>But shared pain is a little easier to handle. Little titbits help. I was pointed at Claude. It seemed better at certain things... certainly some of the more technical and specific work, and definitely at navigating the Microsoft estate.</p>
+
+    <p>I finished my application. Put it live. Gave it to my developer colleagues. They were gentle with me... but... it worked. And it actually addressed the problem. It was the little positive kick I needed. A step forward.</p>
+
+    <h2>Fast forward six months</h2>
+
+    <p>In my day job, I've built a production user interface — Node.js, Express, mobile-optimised — with its own database, third-party integrations delivering instant value, reporting, bug fixes, and 45 changes across 17 full releases in a single week. I write reports that used to take me two days to compile in 25 minutes. I've assessed an entire technical and data infrastructure and identified over £100k per annum of potential savings from structural changes alone.</p>
+
+    <p>And there are hundreds more activities and outputs I've been able to <em>deliver</em> — not just imagine, deliver — as a result of my evolving relationship with AI and the team I'm fortunate enough to work with.</p>
+
+    <h2>The onboarding penny dropped</h2>
+
+    <p>I've realised that my journey is exactly like onboarding a new starter.</p>
+
+    <p>I've been privileged to consistently onboard, train and develop people throughout my entire career. I love it, and I have the energy to do it. I'm also painfully aware of the commitment required at the start of that journey — the drain on your own personal capacity that onboarding a new starter has.</p>
+
+    <p>But that short-term hit on your capacity... and maybe your emotional and physical energy... is going to be worth it. Because you know, if you do a good job, that person will help you, your colleagues and your organisation achieve its goals, and provide a significant return on the investment. A tipping point will come — where that person goes off on their own, and starts paying back. What took you two days a week, your new colleague takes a few hours off you. Then a day and a half. Then eventually, they take on the task completely, and all you have to do is check it and make sure they're clear on the brief.</p>
+
+    <p><strong>This is my AI journey.</strong></p>
+
+    <h2>The honest version</h2>
+
+    <p>The hype is real... but generally, I think it's misrepresented. It is not easy. It doesn't fix problems immediately. It causes more problems, makes more mistakes, is more annoying and is so easily spotted by others... that it is a real drain on you. But with a bit of a continuous improvement mentality — try something bite-sized, learn, reflect, adapt the machine and yourself, go again — it gets better. And better.</p>
+
+    <p>I feel lucky. My career through client-facing roles, customer experience, change and transformation, and product development has armed me to leverage AI in ways that others may not be able to. The gap in my expertise was always hardcore development — front end, back end, APIs, CI/CD pipelines, DevOps. I know enough to flash a few terms about and be dangerous, but I'm a million miles from being a practitioner. But I've worked with and led expert practitioners in these fields. I've picked up a fair bit of knowledge, and I've lived and breathed how those skills sit within the product lifecycle.</p>
+
+    <p>Now I can leverage all of that understanding and steer the machine to do work for me in minutes... that I would have waited months to get done previously. And because I'm the customer, the product manager, the project manager, the BA... the only constraint on the machine is me.</p>
+
+    <h2>Good humans, good stuff</h2>
+
+    <p>So look... it's coming for all our jobs in some ways. But I believe it will create opportunities for people to show what brilliant humans they are. AI tools enable good humans to do more good stuff. And there's plenty of good stuff to be done.</p>
+
+    <p>So get on with some good stuff. And if you want some help doing good stuff... <a href="../../#contact">give me a shout</a>.</p>
+
+</article>
+
+<!-- DIVIDER -->
+<div class="post-divider"><div class="post-divider-line"></div></div>
+
+<!-- AUTHOR BIO -->
+<div class="author-bio">
+    <div class="author-avatar">JB</div>
+    <div class="author-info">
+        <h4>James Brown</h4>
+        <p>Founder of Transform Yorkshire. Twenty-odd years in transformation, programme delivery, and making complex things work — from FTSE 100 boardrooms to owner-led SMEs. Based in Yorkshire, working nationally.</p>
+        <a href="../../#about">More about James</a>
+    </div>
+</div>
+
+<!-- SOFT CTA -->
+<div class="post-cta">
+    <div class="post-cta-box">
+        <h3>If this resonated</h3>
+        <p>Whether you're just starting with AI or you tried and walked away, a conversation costs nothing. We'll give you an honest view of where to start — no sales pitch, no jargon.</p>
+        <a href="../../#contact" class="btn-primary">Start a conversation</a>
+    </div>
+</div>
+
+<!-- SHARE + BACK -->
+<div class="post-actions">
+    <a href="../../#insights" class="back-link">&larr; Back to insights</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://transformyorkshire.uk/blog/ai-is-your-graduate-trainee/" target="_blank" rel="noopener noreferrer" class="share-btn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Share on LinkedIn
+    </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Transform Yorkshire Ltd &middot; Company No. 16066824 &middot; Based in Yorkshire, working nationally</p>
+</footer>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookieBanner" style="
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(17,24,32,0.97); backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(212,197,169,0.15);
+    padding: 1.2rem 2rem;
+">
+    <div style="max-width: 920px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px;">
+            <p style="font-size: 0.82rem; color: #8899AA; margin: 0; line-height: 1.5;">
+                We use cookies to analyse site traffic and improve your experience. By clicking "Accept", you consent to our use of Google Analytics cookies.
+                <a href="#" style="color: #C8A84E; text-decoration: none;" onclick="document.getElementById('cookieDetail').style.display=document.getElementById('cookieDetail').style.display==='none'?'block':'none'; return false;">Learn more</a>
+            </p>
+            <div id="cookieDetail" style="display: none; margin-top: 0.6rem; font-size: 0.75rem; color: #5A6A7A; line-height: 1.5;">
+                We use Google Analytics (GA4) to understand how visitors interact with our website — including which pages are visited, how long people stay, and where traffic comes from. This data is anonymised and helps us improve the site. No personal data is sold or shared with third parties. You can withdraw consent at any time by clearing your cookies.
+            </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem; flex-shrink: 0;">
+            <button onclick="acceptCookies()" style="
+                background: #8B2D3A; color: #F8F6F1; border: none; cursor: pointer;
+                font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 600;
+                padding: 0.6rem 1.5rem; border-radius: 4px; transition: background 0.2s;
+            " onmouseover="this.style.background='#A13545'" onmouseout="this.style.background='#8B2D3A'">Accept</button>
+            <button onclick="declineCookies()" style="
+                background: transparent; color: #8899AA; border: 1px solid rgba(136,153,170,0.3); cursor: pointer;
+                font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 500;
+                padding: 0.6rem 1.5rem; border-radius: 4px; transition: all 0.2s;
+            " onmouseover="this.style.borderColor='#8899AA'" onmouseout="this.style.borderColor='rgba(136,153,170,0.3)'">Decline</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cookie consent management
+    function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
+    }
+
+    function acceptCookies() {
+        setCookie('ty_cookie_consent', 'accepted', 365);
+        document.getElementById('cookieBanner').style.display = 'none';
+        loadGA();
+    }
+
+    function declineCookies() {
+        setCookie('ty_cookie_consent', 'declined', 365);
+        document.getElementById('cookieBanner').style.display = 'none';
+        window['ga-disable-G-8CX9QHTHE1'] = true;
+    }
+
+    function loadGA() {
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+    }
+
+    // On page load: check consent status
+    const consent = getCookie('ty_cookie_consent');
+    if (!consent) {
+        document.getElementById('cookieBanner').style.display = 'block';
+        if (typeof gtag === 'function') {
+            gtag('consent', 'default', { 'analytics_storage': 'denied' });
+        }
+    } else if (consent === 'declined') {
+        window['ga-disable-G-8CX9QHTHE1'] = true;
+    }
+</script>
+
+</body>
+</html>
