@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights — Transform Yorkshire</title>
+    <meta name="description" content="Insights from Transform Yorkshire — practical thinking on AI, transformation, digital presence, and getting things done for Yorkshire businesses.">
+    <meta property="og:title" content="Insights — Transform Yorkshire">
+    <meta property="og:description" content="Things we've learned, things we've got wrong, and things we reckon you should know.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://transformyorkshire.uk/blog/">
+    <!-- Google Analytics — consent-aware -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CX9QHTHE1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        // Default to denied — updated to granted if user accepts
+        gtag('consent', 'default', { 'analytics_storage': 'denied' });
+        gtag('js', new Date());
+        gtag('config', 'G-8CX9QHTHE1');
+        // If already accepted, grant immediately
+        if (document.cookie.indexOf('ty_cookie_consent=accepted') !== -1) {
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Raleway:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg transform='translate(50,50)'%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(72)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(144)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(216)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(288)'/%3E%3Ccircle cx='0' cy='0' r='6' fill='%23C8A84E'/%3E%3C/g%3E%3C/svg%3E">
+    <style>
+        :root {
+            --slate: #2C3E50;
+            --dark: #1A2332;
+            --darker: #111820;
+            --claret: #8B2D3A;
+            --claret-glow: rgba(139,45,58,0.12);
+            --stone: #D4C5A9;
+            --rose: #F8F6F1;
+            --gold: #C8A84E;
+            --light: #8899AA;
+            --border: rgba(212,197,169,0.08);
+            --border-strong: rgba(212,197,169,0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--darker); color: var(--rose); line-height: 1.7; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+            background: rgba(17,24,32,0.92); backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.9rem 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        nav::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--claret), var(--gold), var(--claret)); }
+        .nav-logo { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+        .nav-logo svg { width: 32px; height: 32px; filter: drop-shadow(0 0 6px rgba(200,168,78,0.3)); }
+        .nav-logo span { font-family: 'Raleway', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rose); }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { font-size: 0.8rem; color: var(--light); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-links a.nav-active { color: var(--gold); }
+        .nav-cta { background: var(--claret) !important; color: var(--rose) !important; padding: 0.5rem 1.2rem !important; border-radius: 5px; font-weight: 600 !important; transition: background 0.2s !important; }
+        .nav-cta:hover { background: #A13545 !important; }
+
+        /* PAGE HEADER */
+        .page-header {
+            padding: 7rem 2rem 3rem;
+            max-width: 920px; margin: 0 auto;
+        }
+        .page-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 3rem; line-height: 1.1;
+            color: var(--rose); margin-bottom: 0.6rem;
+        }
+        .page-header p {
+            font-size: 1.05rem; color: rgba(248,246,241,0.7);
+            max-width: 560px; line-height: 1.8;
+        }
+
+        /* BLOG GRID */
+        .blog-grid {
+            max-width: 920px; margin: 0 auto;
+            padding: 0 2rem 3rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+        }
+
+        /* BLOG CARD */
+        .blog-card {
+            background: var(--dark); border: 1px solid var(--border-strong);
+            border-radius: 10px; overflow: hidden;
+            transition: all 0.25s;
+            display: flex; flex-direction: column;
+        }
+        .blog-card:hover { transform: translateY(-3px); border-color: var(--stone); }
+        .blog-card-bar { height: 3px; background: linear-gradient(90deg, var(--claret), var(--gold)); }
+        .blog-card-body { padding: 1.6rem; display: flex; flex-direction: column; flex: 1; }
+        .blog-card-tag {
+            display: inline-block; font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            color: var(--claret); background: var(--claret-glow);
+            padding: 0.25rem 0.6rem; border-radius: 3px;
+            margin-bottom: 0.6rem; align-self: flex-start;
+        }
+        .blog-card h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.1rem; color: var(--rose);
+            margin-bottom: 0.5rem; line-height: 1.3;
+        }
+        .blog-card .blog-card-excerpt {
+            font-size: 0.82rem; color: var(--light); line-height: 1.6;
+            margin-bottom: 1rem; flex: 1;
+        }
+        .blog-card-meta {
+            display: flex; align-items: center; gap: 1rem;
+            padding-top: 0.8rem; border-top: 1px solid var(--border);
+            font-size: 0.7rem; color: rgba(136,153,170,0.5);
+        }
+        .blog-card-meta span { display: flex; align-items: center; gap: 0.3rem; }
+        .blog-card-link {
+            display: inline-block; margin-top: 0.8rem;
+            font-size: 0.8rem; font-weight: 600; color: var(--gold);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .blog-card-link:hover { color: var(--rose); }
+
+        /* COMING SOON CARDS */
+        .blog-card.coming-soon {
+            opacity: 0.45;
+            pointer-events: none;
+        }
+        .blog-card.coming-soon .blog-card-bar {
+            background: linear-gradient(90deg, var(--slate), var(--light));
+        }
+        .coming-soon-badge {
+            display: inline-block; font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            color: var(--light); background: rgba(136,153,170,0.1);
+            padding: 0.25rem 0.6rem; border-radius: 3px;
+            margin-top: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center; padding: 1.5rem 2rem;
+            font-size: 0.7rem; color: rgba(136,153,170,0.4);
+            border-top: 1px solid var(--border);
+        }
+        footer a { color: rgba(136,153,170,0.4); text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .page-header { padding: 6rem 1.5rem 2rem; }
+            .page-header h1 { font-size: 2.2rem; }
+            .blog-grid { grid-template-columns: 1fr; padding: 0 1.5rem 2.5rem; }
+            nav { padding: 0.7rem 1rem; }
+            .nav-links a:not(.nav-cta) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/" class="nav-logo">
+        <svg viewBox="0 0 100 100" width="32" height="32"><g transform="translate(50,50)"><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(72)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(144)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(216)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(288)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(36)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(108)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(180)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(252)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(324)"/><circle cx="0" cy="0" r="5" fill="#C8A84E"/></g></svg>
+        <span>Transform Yorkshire</span>
+    </a>
+    <div class="nav-links">
+        <a href="/#services">Services</a>
+        <a href="/#work">Work</a>
+        <a href="/#approach">Approach</a>
+        <a href="/#about">About</a>
+        <a href="/blog/" class="nav-active">Blog</a>
+        <a href="/#contact" class="nav-cta">Get in touch</a>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+    <h1>Insights</h1>
+    <p>Things we've learned, things we've got wrong, and things we reckon you should know.</p>
+</header>
+
+<!-- BLOG LISTING -->
+<main class="blog-grid">
+
+    <!-- PUBLISHED POST -->
+    <a href="/blog/ai-is-your-graduate-trainee/" class="blog-card" style="text-decoration: none; color: inherit;">
+        <div class="blog-card-bar"></div>
+        <div class="blog-card-body">
+            <span class="blog-card-tag">AI & Transformation</span>
+            <h2>AI Is Your Oxford Graduate Trainee</h2>
+            <p class="blog-card-excerpt">I nearly gave up on AI four times. Here's what changed at month four — and why most people quit before it gets good.</p>
+            <div class="blog-card-meta">
+                <span class="blog-card-date">Coming soon</span>
+                <span>5 min read</span>
+            </div>
+            <span class="blog-card-link">Read more &rarr;</span>
+        </div>
+    </a>
+
+    <!-- COMING SOON: Post 2 -->
+    <div class="blog-card coming-soon">
+        <div class="blog-card-bar"></div>
+        <div class="blog-card-body">
+            <span class="blog-card-tag">Digital Presence</span>
+            <h2>The 5 Things Every Local Business Website Actually Needs</h2>
+            <p class="blog-card-excerpt">Most small business websites cost too much and do too little. Here's what actually moves the needle — and what you can skip entirely.</p>
+            <div class="blog-card-meta">
+                <span>Coming soon</span>
+            </div>
+            <span class="coming-soon-badge">Coming soon</span>
+        </div>
+    </div>
+
+    <!-- COMING SOON: Post 3 -->
+    <div class="blog-card coming-soon">
+        <div class="blog-card-bar"></div>
+        <div class="blog-card-body">
+            <span class="blog-card-tag">AI & Transformation</span>
+            <h2>Yorkshire's AI Advantage: Why SMEs Should Move First</h2>
+            <p class="blog-card-excerpt">The big consultancies are charging six figures for AI strategy. Yorkshire businesses can move faster, cheaper, and smarter. Here's how.</p>
+            <div class="blog-card-meta">
+                <span>Coming soon</span>
+            </div>
+            <span class="coming-soon-badge">Coming soon</span>
+        </div>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Transform Yorkshire Ltd &middot; Company No. 16066824 &middot; Based in Yorkshire, working nationally</p>
+</footer>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookieBanner" style="
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(17,24,32,0.97); backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(212,197,169,0.15);
+    padding: 1.2rem 2rem;
+">
+    <div style="max-width: 920px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px;">
+            <p style="font-size: 0.82rem; color: #8899AA; margin: 0; line-height: 1.5;">
+                We use cookies to analyse site traffic and improve your experience. By clicking "Accept", you consent to our use of Google Analytics cookies.
+                <a href="#" style="color: #C8A84E; text-decoration: none;" onclick="document.getElementById('cookieDetail').style.display=document.getElementById('cookieDetail').style.display==='none'?'block':'none'; return false;">Learn more</a>
+            </p>
+            <div id="cookieDetail" style="display: none; margin-top: 0.6rem; font-size: 0.75rem; color: #5A6A7A; line-height: 1.5;">
+                We use Google Analytics (GA4) to understand how visitors interact with our website — including which pages are visited, how long people stay, and where traffic comes from. This data is anonymised and helps us improve the site. No personal data is sold or shared with third parties. You can withdraw consent at any time by clearing your cookies.
+            </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem; flex-shrink: 0;">
+            <button onclick="acceptCookies()" style="
+                background: #8B2D3A; color: #F8F6F1; border: none; cursor: pointer;
+                font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 600;
+                padding: 0.6rem 1.5rem; border-radius: 4px; transition: background 0.2s;
+            " onmouseover="this.style.background='#A13545'" onmouseout="this.style.background='#8B2D3A'">Accept</button>
+            <button onclick="declineCookies()" style="
+                background: transparent; color: #8899AA; border: 1px solid rgba(136,153,170,0.3); cursor: pointer;
+                font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 500;
+                padding: 0.6rem 1.5rem; border-radius: 4px; transition: all 0.2s;
+            " onmouseover="this.style.borderColor='#8899AA'" onmouseout="this.style.borderColor='rgba(136,153,170,0.3)'">Decline</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cookie consent management
+    function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
+    }
+
+    function acceptCookies() {
+        setCookie('ty_cookie_consent', 'accepted', 365);
+        document.getElementById('cookieBanner').style.display = 'none';
+        loadGA();
+    }
+
+    function declineCookies() {
+        setCookie('ty_cookie_consent', 'declined', 365);
+        document.getElementById('cookieBanner').style.display = 'none';
+        window['ga-disable-G-8CX9QHTHE1'] = true;
+    }
+
+    function loadGA() {
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+
+    // On page load: check consent status
+    const consent = getCookie('ty_cookie_consent');
+    if (!consent) {
+        document.getElementById('cookieBanner').style.display = 'block';
+        if (typeof gtag === 'function') {
+            gtag('consent', 'default', {
+                'analytics_storage': 'denied'
+            });
+        }
+    } else if (consent === 'declined') {
+        window['ga-disable-G-8CX9QHTHE1'] = true;
+    }
+</script>
+
+</body>
+</html>
