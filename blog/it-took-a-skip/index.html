@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It Took a Skip to Get Me Moving Again — Transform Yorkshire</title>
+    <meta name="description" content="We lost our dog before Christmas. My grandad passed away after New Year. The garden became the thing I couldn't face. Then we ordered a skip — and everything started to shift.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="It Took a Skip to Get Me Moving Again">
+    <meta property="og:description" content="We lost our dog before Christmas. The garden became the thing I couldn't face. Then we ordered a skip — and everything started to shift.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://transformyorkshire.uk/blog/it-took-a-skip/">
+    <meta property="og:site_name" content="Transform Yorkshire">
+
+    <!-- Google Analytics — consent-aware -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CX9QHTHE1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', { 'analytics_storage': 'denied' });
+        gtag('js', new Date());
+        gtag('config', 'G-8CX9QHTHE1');
+        if (document.cookie.indexOf('ty_cookie_consent=accepted') !== -1) {
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Raleway:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg transform='translate(50,50)'%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(72)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(144)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(216)'/%3E%3Cpath d='M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z' fill='%23F8F6F1' stroke='%232C3E50' stroke-width='2' transform='rotate(288)'/%3E%3Ccircle cx='0' cy='0' r='6' fill='%23C8A84E'/%3E%3C/g%3E%3C/svg%3E">
+    <style>
+        :root {
+            --slate: #2C3E50;
+            --dark: #1A2332;
+            --darker: #111820;
+            --claret: #8B2D3A;
+            --claret-glow: rgba(139,45,58,0.12);
+            --stone: #D4C5A9;
+            --rose: #F8F6F1;
+            --gold: #C8A84E;
+            --light: #8899AA;
+            --border: rgba(212,197,169,0.08);
+            --border-strong: rgba(212,197,169,0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--darker); color: var(--rose); line-height: 1.7; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+            background: rgba(17,24,32,0.92); backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.9rem 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        nav::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--claret), var(--gold), var(--claret)); }
+        .nav-logo { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+        .nav-logo svg { width: 32px; height: 32px; filter: drop-shadow(0 0 6px rgba(200,168,78,0.3)); }
+        .nav-logo span { font-family: 'Raleway', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rose); }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { font-size: 0.8rem; color: var(--light); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta { background: var(--claret) !important; color: var(--rose) !important; padding: 0.5rem 1.2rem !important; border-radius: 5px; font-weight: 600 !important; transition: background 0.2s !important; }
+        .nav-cta:hover { background: #A13545 !important; }
+
+        /* BLOG POST HEADER */
+        .post-header {
+            padding: 7rem 2rem 2.5rem;
+            max-width: 720px; margin: 0 auto;
+        }
+        .post-category {
+            display: inline-block; font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--claret); background: var(--claret-glow);
+            padding: 0.25rem 0.6rem; border-radius: 3px; margin-bottom: 1rem;
+        }
+        .post-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem; line-height: 1.15;
+            color: var(--rose); margin-bottom: 0.5rem;
+        }
+        .post-subtitle {
+            font-size: 1.05rem; color: var(--light);
+            line-height: 1.6; margin-bottom: 1.2rem;
+            max-width: 600px;
+        }
+        .post-meta {
+            display: flex; gap: 1.5rem; align-items: center;
+            font-size: 0.75rem; color: rgba(136,153,170,0.6);
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        .post-meta time { color: var(--light); }
+
+        /* ARTICLE BODY */
+        .post-body {
+            max-width: 720px; margin: 0 auto;
+            padding: 0 2rem 2rem;
+        }
+        .post-body p {
+            font-size: 0.95rem; color: rgba(248,246,241,0.85);
+            line-height: 1.85; margin-bottom: 1.4rem;
+        }
+        .post-body h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem; color: var(--rose);
+            margin: 2.5rem 0 0.8rem;
+        }
+        .post-body h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem; color: var(--rose);
+            margin: 2rem 0 0.6rem;
+        }
+        .post-body strong { color: var(--rose); }
+        .post-body em { color: var(--stone); }
+        .post-body ul, .post-body ol {
+            margin: 0.5rem 0 1.4rem 1.5rem;
+            font-size: 0.95rem; color: rgba(248,246,241,0.85);
+            line-height: 1.85;
+        }
+        .post-body li { margin-bottom: 0.6rem; }
+        .post-body blockquote {
+            border-left: 3px solid var(--claret);
+            padding: 0.8rem 1.2rem;
+            margin: 1.5rem 0;
+            background: rgba(139,45,58,0.06);
+            border-radius: 0 6px 6px 0;
+        }
+        .post-body blockquote p { margin-bottom: 0; color: var(--stone); font-style: italic; }
+
+        /* SECTION DIVIDER */
+        .post-divider {
+            max-width: 720px; margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .post-divider-line {
+            height: 1px; background: var(--border-strong);
+        }
+
+        /* AUTHOR BIO */
+        .author-bio {
+            max-width: 720px; margin: 0 auto;
+            padding: 2rem 2rem 1.5rem;
+            display: flex; gap: 1.2rem; align-items: flex-start;
+        }
+        .author-avatar {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: var(--dark); border: 2px solid var(--border-strong);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem; color: var(--gold);
+        }
+        .author-info h4 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem; color: var(--rose); margin-bottom: 0.2rem;
+        }
+        .author-info p {
+            font-size: 0.82rem; color: var(--light); line-height: 1.55;
+        }
+        .author-info a { color: var(--gold); text-decoration: none; font-size: 0.82rem; }
+        .author-info a:hover { text-decoration: underline; }
+
+        /* SOFT CTA */
+        .post-cta {
+            max-width: 720px; margin: 0 auto;
+            padding: 1.5rem 2rem 2rem;
+        }
+        .post-cta-box {
+            background: var(--dark); border: 1px solid var(--border-strong);
+            border-radius: 10px; padding: 2rem;
+            text-align: center;
+        }
+        .post-cta-box h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem; color: var(--rose); margin-bottom: 0.5rem;
+        }
+        .post-cta-box p {
+            font-size: 0.88rem; color: var(--light);
+            line-height: 1.6; margin-bottom: 1.2rem;
+            max-width: 480px; margin-left: auto; margin-right: auto;
+        }
+        .btn-primary {
+            display: inline-block; background: var(--claret); color: var(--rose);
+            font-family: 'Raleway', sans-serif; font-size: 0.82rem;
+            font-weight: 600; letter-spacing: 0.04em;
+            padding: 0.8rem 2rem; border-radius: 5px;
+            text-decoration: none; transition: all 0.2s;
+        }
+        .btn-primary:hover { background: #A13545; transform: translateY(-1px); }
+
+        /* SHARE + BACK */
+        .post-actions {
+            max-width: 720px; margin: 0 auto;
+            padding: 1rem 2rem 3rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .back-link {
+            font-size: 0.82rem; color: var(--light);
+            text-decoration: none; transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--gold); }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: #0A66C2; color: #fff;
+            font-family: 'Raleway', sans-serif; font-size: 0.78rem;
+            font-weight: 600; padding: 0.5rem 1.2rem;
+            border-radius: 5px; text-decoration: none;
+            transition: background 0.2s; border: none; cursor: pointer;
+        }
+        .share-btn:hover { background: #084d94; }
+        .share-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+        /* FOOTER */
+        footer {
+            text-align: center; padding: 1.5rem 2rem;
+            font-size: 0.7rem; color: rgba(136,153,170,0.4);
+            border-top: 1px solid var(--border);
+        }
+        footer a { color: rgba(136,153,170,0.4); text-decoration: none; }
+
+        /* SIGN-OFF */
+        .post-signoff {
+            max-width: 720px; margin: 0 auto;
+            padding: 0 2rem 1rem;
+            font-size: 0.82rem; color: var(--light);
+            font-style: italic;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .post-header { padding: 6rem 1.5rem 2rem; }
+            .post-header h1 { font-size: 2rem; }
+            .post-body { padding: 0 1.5rem 2rem; }
+            .post-divider { padding: 0 1.5rem; }
+            .author-bio { padding: 2rem 1.5rem 1.5rem; flex-direction: column; }
+            .post-cta { padding: 1.5rem; }
+            .post-cta-box { padding: 1.5rem; }
+            .post-actions { padding: 1rem 1.5rem 3rem; flex-direction: column-reverse; gap: 1rem; align-items: flex-start; }
+            .post-meta { flex-wrap: wrap; gap: 0.8rem; }
+            .post-signoff { padding: 0 1.5rem 1rem; }
+            nav { padding: 0.7rem 1rem; }
+            .nav-links a:not(.nav-cta) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="../../" class="nav-logo">
+        <svg viewBox="0 0 100 100" width="32" height="32"><g transform="translate(50,50)"><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(72)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(144)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(216)"/><path d="M0,-30 C12,-25 15,-10 0,0 C-15,-10 -12,-25 0,-30Z" fill="#F8F6F1" transform="rotate(288)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(36)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(108)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(180)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(252)"/><path d="M0,-38 C4,-35 4,-32 0,-30 C-4,-32 -4,-35 0,-38Z" fill="#D4C5A9" transform="rotate(324)"/><circle cx="0" cy="0" r="5" fill="#C8A84E"/></g></svg>
+        <span>Transform Yorkshire</span>
+    </a>
+    <div class="nav-links">
+        <a href="../../#services">Services</a>
+        <a href="../../#work">Work</a>
+        <a href="../../#about">About</a>
+        <a href="../../#insights">Blog</a>
+        <a href="../../#contact" class="nav-cta">Get in touch</a>
+    </div>
+</nav>
+
+<!-- POST HEADER -->
+<header class="post-header">
+    <span class="post-category">Life & Business</span>
+    <h1>It Took a Skip to Get Me Moving Again</h1>
+    <p class="post-subtitle">We lost our dog before Christmas. The garden became the thing I couldn't face. Then we ordered a skip — and everything started to shift.</p>
+    <div class="post-meta">
+        <span>James Brown</span>
+        <time datetime="2026-04-04">4 April 2026</time>
+        <span>5 min read</span>
+    </div>
+</header>
+
+<!-- ARTICLE -->
+<article class="post-body">
+
+    <p>We lost our dog Baxter just before Christmas. And my grandad passed away not long after New Year.</p>
+
+    <p>I don't think I realised how much it hit me. I just... worked. Put my head down, stayed busy, filled the hours. The garden — Baxter's garden, really — I couldn't face it. None of us could. We'd see reflections of him in the windows barking to come in. Then the disappointment and sadness of realising it was a cardboard box or something flapping about. I'd walk past the back door and not even look out.</p>
+
+    <p>It's been a rough few months, honestly. Physically, mentally. Cold, dark, miserable weather that just seemed to match everything else. I threw myself into work, which helped in some ways and masked things in others.</p>
+
+    <p>Then this week, something shifted.</p>
+
+    <p>I'd followed up on some health stuff I'd been putting off. Had a proper conversation with my GP on Wednesday. Made a decision to try. Not a big dramatic decision — just... try.</p>
+
+    <h2>We ordered a skip</h2>
+
+    <p>That was it. That was the thing. A skip, delivered to the front of the house on Thursday. My wife got stuck in with the kids while I was still finding reasons to put it off. And then I joined in. And we filled the entire skip in a day.</p>
+
+    <p>The next day — today — I jet-washed the whole garden. The astroturf looks brilliant. My boys have been out playing cricket and football on it for the first time in months. The biggest issue historically was always Baxter's poo... and that's a sentence I wasn't expecting to write in a blog post, but there it is. I actually think I'm going to miss it...</p>
+
+    <p>Strawberries were planted. I cleaned off the outdoor sofa cushions. Did a test patch of grouting on the patio to see how it looks before committing to the rest. We ordered pizza from a local place we love — Wood Fire Dine — and ate together as a family.</p>
+
+    <p>It's not finished. Not even close. I've got more patio to jet wash, more grouting to do, a giant pizza oven I love but need to sell because it's too big. And the fence.</p>
+
+    <h2>The fence</h2>
+
+    <p>The fence is the one that scares me. I put it up a couple of years ago, and I was very proud of myself. All the googling and YouTube told me it'd be fine to glue wooden posts to the existing concrete ones... and for 18 months, they were right. But Storm Dave of all names has come for my masterpiece and now it's flapping away... my soon-to-be-released pizza oven the one thing between a fence apocalypse...</p>
+
+    <p>I've avoided it. Avoided my neighbour. A task too big and too complicated — an elephant. Metaphorically speaking obviously... so, I turned to my friendly neighbourhood LLM... for this particular circumstance, and most non-coding related challenges, I do still turn to Mr ChatGPT. I restrained myself from creating a selection of dog-headed armed forces characters and hit ChatGPT up with a rambling prompt. It told me I'd been silly to expect glue to hold up a fence. Good start. But... we started to 'eat the elephant' as it were... what I should have done. Bolts. Obviously. But I don't know my bolts, and I don't know if I have the tools to put bolts in. I shared pictures of the hardware I have, scribbles from when I measured up and ordered the fencing as well as a couple of pictures so ChatGPT could validate its assumptions, and reassure me that the equipment I had would be fine. But... given my concerns (drilling into concrete posts and blowing them to smithereens, upsetting me, my neighbour and my bank balance!) ChatGPT recommended that I could upgrade my drill bit to a premium product, just for this task.</p>
+
+    <p>I bounced this around, asked ChatGPT for real life feedback — what were the best bolts, drill bits and glue; where could I get them, what was the best price; short of ordering the bits itself, it walked me through. It didn't do it for me. It just did the leg work. Brilliantly. And at speed. It took me about 15 minutes in total to go from 'help me' to the text from Screwfix (other bolt providers are available!) saying my stuff would be available the next day.</p>
+
+    <h2>The moral of the story</h2>
+
+    <p>What's the moral of the story I hear you shout? Did I bugger up the fence? Does my neighbour hate me? Did I actually make it to Screwfix? The moral of the story is twofold...</p>
+
+    <p><strong>How do you eat an elephant? In bite-size chunks.</strong></p>
+
+    <p><strong>It's the action that matters.</strong></p>
+
+    <p>The garden wasn't one big impossible job. It was a dozen smaller jobs that had piled up into something that felt overwhelming. And the longer I left it, the worse it got, and the harder it was to start.</p>
+
+    <p>I think a lot of business owners feel exactly the same way about their digital stuff.</p>
+
+    <p>The website that hasn't been updated since 2021. The social media that went quiet. The AI tools everyone's talking about but nobody's tried. The "I know I should, but..." list that just keeps getting longer.</p>
+
+    <p>You don't need to do it all at once. You don't need to be an expert. I'm not a fencer — but I asked an AI for help and now I've got a plan. I'm not a gardener — but I've got a jet washer and a bit of momentum.</p>
+
+    <p><strong>Sometimes you just need a skip and a Saturday.</strong></p>
+
+    <p>The garden's not perfect. But the kids are playing in it. It feels lighter. And my eldest's birthday is coming up — we usually have a big gathering of friends and family — and for the first time in months, I'm actually looking forward to it.</p>
+
+    <p>Tomorrow we're at my Mrs' parents for Easter dinner, Easter egg hunt and chocolate poisoning. Monday at her sister's. My mum's coming round. Next week, Centre Parcs — somewhere we haven't been for ages. Cricket season starts soon.</p>
+
+    <p>Things aren't fixed. But they're moving. And moving feels a lot better than standing still.</p>
+
+    <p>If your business has got a garden that needs a skip — whether that's a website, a digital presence, or just figuring out what AI can actually do for you — <a href="../../#contact">give me a shout</a>. I'm not going to pretend I've got all the answers. But I've got a jet washer, a plan from ChatGPT, and I'm not afraid of a bit of a mess.</p>
+
+    <p>Happy Easter.</p>
+
+</article>
+
+<!-- SIGN-OFF -->
+<div class="post-signoff">
+    <p>James Brown is the founder of Transform Yorkshire, helping Yorkshire businesses build better digital foundations. He is also, apparently, now a part-time patio grouter.</p>
+</div>
+
+<!-- DIVIDER -->
+<div class="post-divider"><div class="post-divider-line"></div></div>
+
+<!-- AUTHOR BIO -->
+<div class="author-bio">
+    <div class="author-avatar">JB</div>
+    <div class="author-info">
+        <h4>James Brown</h4>
+        <p>Founder of Transform Yorkshire. Twenty-odd years in transformation, programme delivery, and making complex things work — from FTSE 100 boardrooms to owner-led SMEs. Based in Yorkshire, working nationally.</p>
+        <a href="../../#about">More about James</a>
+    </div>
+</div>
+
+<!-- SOFT CTA -->
+<div class="post-cta">
+    <div class="post-cta-box">
+        <h3>Got a garden that needs a skip?</h3>
+        <p>Whether it's a website that's been gathering dust, a social media presence that went quiet, or you just want to understand what AI can do for your business — a conversation costs nothing.</p>
+        <a href="../../#contact" class="btn-primary">Start a conversation</a>
+    </div>
+</div>
+
+<!-- SHARE + BACK -->
+<div class="post-actions">
+    <a href="../../#insights" class="back-link">&larr; Back to insights</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://transformyorkshire.uk/blog/it-took-a-skip/" target="_blank" rel="noopener noreferrer" class="share-btn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Share on LinkedIn
+    </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 Transform Yorkshire Ltd &middot; Company No. 16066824 &middot; Based in Yorkshire, working nationally</p>
+</footer>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookieBanner" style="
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(17,24,32,0.97); backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(212,197,169,0.15);
+    padding: 1.2rem 2rem;
+">
+    <div style="max-width: 920px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px;">
+            <p style="font-size: 0.82rem; color: #8899AA; margin: 0; line-height: 1.5;">
+                We use cookies to analyse site traffic and improve your experience. By clicking "Accept", you consent to our use of Google Analytics cookies.
+                <a href="#" style="color: #C8A84E; text-decoration: none;" onclick="document.getElementById('cookieDetail').style.display=document.getElementById('cookieDetail').style.display==='none'?'block':'none'; return false;">Learn more</a>
+            </p>
+            <div id="cookieDetail" style="display: none; margin-top: 0.6rem; font-size: 0.75rem; color: #5A6A7A; line-height: 1.5;">
+                We use Google Analytics (GA4) to understand how visitors interact with our website — including which pages are visited, how long people stay, and where traffic comes from. This data is anonymised and helps us improve the site. No personal data is sold or shared with third parties. You can withdraw consent at any time by clearing your cookies.
+            </div>
+        </div>
+        <div style="display: flex; gap: 0.8rem; flex-shrink: 0;">
+            <button onclick="acceptCookies()" style="
+                background: #8B2D3A; color: #F8F6F1; border: none; cursor: pointer;
+                font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 600;
+                padding: 0.6rem 1.5rem; border-radius: 4px; transition: background 0.2s;
+            " onmouseover="this.style.background='#A13545'" onmouseout="this.style.background='#8B2D3A'">Accept</button>
+            <button onclick="declineCookies()" style="
+                background: transparent; color: #8899AA; border: 1px solid rgba(136,153,170,0.3); cursor: pointer;
+                font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 500;
+                padding: 0.6rem 1.5rem; border-radius: 4px; transition: all 0.2s;
+            " onmouseover="this.style.borderColor='#8899AA'" onmouseout="this.style.borderColor='rgba(136,153,170,0.3)'">Decline</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cookie consent management
+    function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
+    }
+
+    function acceptCookies() {
+        setCookie('ty_cookie_consent', 'accepted', 365);
+        document.getElementById('cookieBanner').style.display = 'none';
+        loadGA();
+    }
+
+    function declineCookies() {
+        setCookie('ty_cookie_consent', 'declined', 365);
+        document.getElementById('cookieBanner').style.display = 'none';
+        window['ga-disable-G-8CX9QHTHE1'] = true;
+    }
+
+    function loadGA() {
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+    }
+
+    // On page load: check consent status
+    const consent = getCookie('ty_cookie_consent');
+    if (!consent) {
+        document.getElementById('cookieBanner').style.display = 'block';
+        if (typeof gtag === 'function') {
+            gtag('consent', 'default', { 'analytics_storage': 'denied' });
+        }
+    } else if (consent === 'declined') {
+        window['ga-disable-G-8CX9QHTHE1'] = true;
+    }
+</script>
+
+</body>
+</html>
